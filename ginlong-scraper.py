@@ -156,13 +156,13 @@ def do_work():
         Battery_Charge_Percent = resultJson['result']['deviceWapper']['dataJSON'].get('1cv')
         if Battery_Charge_Percent is None:
             Battery_Charge_Percent = 0
-	Daily_Energy_Purchased = resultJson['result']['deviceWapper']['dataJSON'].get('1bx')
+	    Daily_Energy_Purchased = resultJson['result']['deviceWapper']['dataJSON'].get('1bx')
         if Daily_Energy_Purchased is None:
             Daily_Energy_Purchased = 0
-	Monthly_Energy_Purchased = resultJson['result']['deviceWapper']['dataJSON'].get('1bz')
+	    Monthly_Energy_Purchased = resultJson['result']['deviceWapper']['dataJSON'].get('1bz')
         if Monthly_Energy_Purchased is None:
             Monthly_Energy_Purchased = 0
-	Annual_Energy_Purchased = resultJson['result']['deviceWapper']['dataJSON'].get('1cb')
+	    Annual_Energy_Purchased = resultJson['result']['deviceWapper']['dataJSON'].get('1cb')
         if Annual_Energy_Purchased is None:
             Annual_Energy_Purchased = 0
         niceTimestamp = time.ctime((updateDate) / 1000)
@@ -195,7 +195,7 @@ def do_work():
         logging.debug('Monthly_Energy_Used: %s' % str(Monthly_Energy_Used))
         logging.debug('Annual_Energy_Used: %s' % str(Annual_Energy_Used))
         logging.debug('Battery_Charge_Percent: %s' % str(Battery_Charge_Percent))
-	logging.debug('Daily_Energy_Purchased: %s' % str(Daily_Energy_Purchased))
+	    logging.debug('Daily_Energy_Purchased: %s' % str(Daily_Energy_Purchased))
         logging.debug('Monthly_Energy_Purchased: %s' % str(Monthly_Energy_Purchased))
         logging.debug('Annual_Energy_Purchased: %s' % str(Annual_Energy_Purchased))
 
@@ -228,17 +228,17 @@ def do_work():
                         "updateDate": int(updateDate),
                         "Total_Generation": float(Total_Generation),
                         "Generation_Last_Month": float(Generation_Last_Month),
-			"Power_Grid_Total_Power": float(Power_Grid_Total_Power),
-			"Total_On_grid_Generation": float(Total_On_grid_Generation),
-			"Total_Energy_Purchased": float(Total_Energy_Purchased),
-			"Consumption_Power": float(Consumption_Power),
-			"Consumption_Energy": float(Consumption_Energy),
-			"Daily_Energy_Used": float(Daily_Energy_Used), 
-			"Monthly_Energy_Used": float(Monthly_Energy_Used), 
-			"Annual_Energy_Used": float(Annual_Energy_Used),
-			"Daily_Energy_Purchased": float(Daily_Energy_Purchased),
-			"Monthly_Energy_Purchased": float(Monthly_Energy_Purchased),
-			"Annual_Energy_Purchased": float(Annual_Energy_Purchased),
+                        "Power_Grid_Total_Power": float(Power_Grid_Total_Power),
+                        "Total_On_grid_Generation": float(Total_On_grid_Generation),
+                        "Total_Energy_Purchased": float(Total_Energy_Purchased),
+                        "Consumption_Power": float(Consumption_Power),
+                        "Consumption_Energy": float(Consumption_Energy),
+                        "Daily_Energy_Used": float(Daily_Energy_Used), 
+                        "Monthly_Energy_Used": float(Monthly_Energy_Used), 
+                        "Annual_Energy_Used": float(Annual_Energy_Used),
+                        "Daily_Energy_Purchased": float(Daily_Energy_Purchased),
+                        "Monthly_Energy_Purchased": float(Monthly_Energy_Purchased),
+                        "Annual_Energy_Purchased": float(Annual_Energy_Purchased),
                     }
                 }
             ]
